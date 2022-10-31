@@ -1,0 +1,65 @@
+/* @use "presets/variables" as *; */
+
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+
+@mixin min-lg {
+    @media (min-width: $lg) {
+        @content
+    }
+}
+
+@mixin max-lg {
+    @media (max-width: $lg) {
+        @content
+    }
+}
+
+@mixin maxmin-lg-md {
+    @media (max-width: calc($lg - 0.2px)) and (min-width: $md) {
+        @content
+    }
+}
+
+@mixin maxmin-lg-sm {
+    @media (max-width: calc($lg - 0.2px)) and (min-width: $sm) {
+        @content
+    }
+}
+
+@mixin min-md {
+    @media (min-width: $md) {
+        @content
+    }
+}
+
+@mixin max-md {
+    @media (max-width: $md) {
+        @content
+    }
+}
+
+@mixin maxmin-md-sm {
+    @media (max-width: calc($md - 0.2px)) and (min-width: calc($sm - 0.2px)) {
+        @content
+    }
+}
+
+@mixin min-sm {
+    @media (min-width: $sm) {
+        @content
+    }
+}
+
+@mixin max-sm {
+    @media (max-width: $sm) {
+        @content
+    }
+}
+
+/* .wrapper {
+    @include min-lg {
+
+    }
+} */

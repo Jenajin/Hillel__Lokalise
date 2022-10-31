@@ -1,0 +1,23 @@
+@use "../mixins/index" as *;
+@use "../mixins/index" as *;
+
+*,
+*::after,
+*::before {
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+ 
+}
+
+body {
+    font-family: 'Graphik LCG';
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
