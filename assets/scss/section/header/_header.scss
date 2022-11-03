@@ -1,0 +1,8 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

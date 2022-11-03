@@ -2,12 +2,11 @@
 @use "../presets" as *;
 
 .container {
-    max-width: 1380px;
+    max-width: $ul;
     padding-left: 20px;
     padding-right: 20px;
     margin-inline: auto;
 }
-
 
 .btn {
     padding: 0.2em;
@@ -16,17 +15,22 @@
     cursor: pointer;
 }
 .btn--light {
-    background-color: $color-white;
+    background-color: $color-light;
     border: 1px solid rgba($primary-color, 0.5);
     color: $primary-color;
 }
 .btn--acent {
     background-color: $secondary-color;
     border: none;
-    color: $color-white;
+    color: $color-light;
 }
 .btn--sm {
     min-width: 120px;
     max-width: 250px;
     height: 45px;
+}
+.btn--md {
+    min-width: 160px;
+    max-width: 260px;
+    height: 60px;
 }

@@ -1,2 +1,62 @@
-@use "../../mixins/" as *;
-@use "../../presets/" as *;
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.header-content {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: grid;
+    grid-template-areas:
+        "tl pict"
+        "des pict"
+        "act pict"
+        "nts pict";
+    grid-template-columns: 550px 1fr;
+
+    &__title {
+        grid-area: tl;
+        margin: 0 0 8px 0;
+        font-weight: 600;
+        font-size: 65px;
+        line-height: 70px;
+        color: $primary-color;
+        padding-top: $gap;
+        padding-bottom: $gap;
+    }
+
+    &__description {
+        grid-area: des;
+        font-size: 25px;
+        line-height: 35px;
+        color: $primary-color;
+        max-width: 470px;
+        padding-top: $gap;
+        padding-bottom: $gap * 2;
+        margin-bottom: 8px;
+    }
+
+    &__action {
+        grid-area: act;
+        display: flex;
+        gap: $gap-sm;
+    }
+
+    &__notes {
+        grid-area: nts;
+        font-size: 15px;
+        line-height: 25px;
+        color: $primary-color;
+        margin-top: 5px;
+        padding-top: $gap;
+        padding-bottom: $gap;
+    }
+
+    &__picture {
+        grid-area: pict;
+    }
+
+    &__image {
+        max-width: 759px;
+        max-height: 529px;
+    }
+
+}

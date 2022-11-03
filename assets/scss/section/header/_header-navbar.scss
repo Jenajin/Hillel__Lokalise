@@ -3,8 +3,11 @@
 
 .header-navbar {
     display: flex;
-    align-items: center;
     position: relative;
+    align-items: center;
+    width: 100%;
+    padding-top: $gap;
+    padding-bottom: $gap;
 
     &::after {
         position: absolute;
@@ -13,8 +16,8 @@
         width: 100vw;
         height: 1px;
         background-color: rgba($primary-color, 0.5);
-        left: 50%;
-        margin-left: -50vw;
+        left: 49.4%;
+        transform: translateX(-50%);
     }
 
     &__logo {
@@ -33,13 +36,16 @@
     &__link {
         display: block;
         padding: $gap-sm;
+        font-size: 15px;
+        line-height: 20px;
+        color: $primary-color;
     }
 
     &__action {
         margin-left: auto;
         display: flex;
         gap: $gap-sm;
-        margin-top: 25px;
-        margin-bottom: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 }
