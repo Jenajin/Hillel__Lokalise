@@ -165,6 +165,40 @@ template {
 [hidden] {
   display: none;
 }
+.container {
+  max-width: 1380px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  margin-inline: auto;
+}
+
+.btn {
+  padding: 0.2em;
+
+  cursor: pointer;
+  text-align: center;
+
+  font-weight: 600;
+}
+
+.btn--light {
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+}
+
+.btn--acent {
+  color: #ffffff;
+  border: none;
+  background-color: #ff6336;
+}
+
+.btn--sm {
+  min-width: 120px;
+  max-width: 250px;
+  height: 45px;
+}
 
 @font-face {
   font-family: "Graphik LCG";
@@ -190,16 +224,76 @@ template {
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
   font-family: "Graphik LCG";
   font-weight: 400;
+  font-style: normal;
 }
 
 a {
   text-decoration: none;
 
   color: inherit;
+}
+
+.header-navbar {
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+.header-navbar::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  width: 100vw;
+  height: 1px;
+  margin-left: -50vw;
+
+  content: "";
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header-navbar__logo {
+  margin-right: 50px;
+}
+.header-navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 0.2em 20px;
+}
+.header-navbar__link {
+  display: block;
+
+  padding: 10px;
+}
+.header-navbar__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: auto;
+
+  gap: 10px;
 }

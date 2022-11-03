@@ -1,5 +1,5 @@
-@use "../mixins/index" as *;
-@use "../mixins/index" as *;
+@use "../mixins" as *;
+@use "../presets" as *;
 
 *,
 *::after,
@@ -8,13 +8,13 @@
 }
 
 html {
-  font-size: 14px;
- 
+  font-size: 16px;
 }
 
 body {
     font-family: 'Graphik LCG';
     font-weight: 400;
+    font-style: normal;
 }
 
 a {

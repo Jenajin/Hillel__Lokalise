@@ -1,0 +1,32 @@
+@use "../mixins" as *;
+@use "../presets" as *;
+
+.container {
+    max-width: 1380px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-inline: auto;
+}
+
+
+.btn {
+    padding: 0.2em;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+.btn--light {
+    background-color: $color-white;
+    border: 1px solid rgba($primary-color, 0.5);
+    color: $primary-color;
+}
+.btn--acent {
+    background-color: $secondary-color;
+    border: none;
+    color: $color-white;
+}
+.btn--sm {
+    min-width: 120px;
+    max-width: 250px;
+    height: 45px;
+}
