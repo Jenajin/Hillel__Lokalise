@@ -3,8 +3,8 @@
 
 .container {
     max-width: $ul;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $gap;
+    padding-right: $gap;
     margin-inline: auto;
 }
 

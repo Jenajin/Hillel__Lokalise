@@ -2,7 +2,8 @@
 @use "../../presets" as *;
 
 .quality {
-    padding: 90px 75px 150px;
+    padding-top: 90px;
+    padding-bottom: 150px;
     display: grid;
 
     @include min-md {
@@ -14,6 +15,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         row-gap: 250px;
+        column-gap: $gap;
     }
 
     @include max-md {
@@ -29,7 +31,6 @@
             " bl4"
             "img-4";
     }
-
 }
 
 .blurb {
@@ -37,8 +38,10 @@
     flex-direction: column;
     gap: $gap + 10px;
     justify-content: center;
-    max-width: 520px;
-    width: 100%;
+
+    @include min-md {
+        max-width: 520px;
+    }
 
     &-1 {
         grid-area: bl1;
@@ -46,7 +49,10 @@
 
     &-2 {
         grid-area: bl2;
-        margin-left: 138px;
+
+        @include min-xl {
+            margin-left: 110px;
+        }
     }
 
     &-3 {
@@ -55,7 +61,10 @@
 
     &-4 {
         grid-area: bl4;
-        margin-left: 138px;
+
+        @include min-xl {
+            margin-left: 110px;
+        }
     }
 }
 
@@ -66,6 +75,10 @@
         font-size: 50px;
         line-height: 60px;
         color: $primary-color;
+
+        @include max-md {
+            text-align: center;
+        }
     }
 
     &__descriptio {
@@ -83,11 +96,13 @@
     }
 }
 
-
 .blurb__image {
     width: 100%;
+    height: 100%;
     max-width: 632px;
     max-height: 632px;
+    display: flex;
+    margin: auto;
 
     &__image-1 {
         grid-area: img-1;
