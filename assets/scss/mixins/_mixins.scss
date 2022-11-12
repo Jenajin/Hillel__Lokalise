@@ -3,3 +3,10 @@
     margin: 0;
     padding: 0; 
 }
+
+@mixin link-underline {
+    a {
+        color: inherit;
+        text-decoration: underline;
+      }
+}
