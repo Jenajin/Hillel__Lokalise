@@ -1,0 +1,36 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.quality {
+    padding: 90px 75px 150px;
+}
+
+.blurb {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    
+    
+}
+
+.blurb-container { 
+    flex-grow: 5;
+     
+
+
+
+}
+
+.blurb__title {}
+
+.blurb__descriptio {}
+
+.blurb__start {}
+
+.blurb__link {}
+
+.blurb__image {
+    flex-shrink: 5;
+    width: 100%;
+    
+}

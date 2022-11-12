@@ -5,12 +5,25 @@
     margin-top: auto;
     margin-bottom: auto;
     display: grid;
-    grid-template-areas:
-        "tl pict"
-        "des pict"
-        "act pict"
-        "nts pict";
-    grid-template-columns: 550px 1fr;
+
+    @include min-xl {
+        grid-template-areas:
+            "tl pict"
+            "des pict"
+            "act pict"
+            "nts pict";
+        grid-template-columns: 550px 1fr;
+    }
+
+    @include max-xl {
+        grid-template-areas:
+            "tl"
+            "des"
+            "act"
+            "pict"
+            "nts";
+        grid-template-columns: 1fr;
+    }
 
     &__title {
         grid-area: tl;
@@ -21,6 +34,10 @@
         color: $primary-color;
         padding-top: $gap;
         padding-bottom: $gap;
+
+        @include max-xl {
+            text-align: center;
+        }
     }
 
     &__description {
@@ -28,16 +45,28 @@
         font-size: 25px;
         line-height: 35px;
         color: $primary-color;
-        max-width: 470px;
         padding-top: $gap;
         padding-bottom: $gap * 2;
         margin-bottom: 8px;
+
+        @include min-xl {
+            max-width: 470px;
+        }
+
+        @include max-xl {
+            max-width: none;
+        }
     }
 
     &__action {
         grid-area: act;
         display: flex;
         gap: $gap-sm;
+
+        @include max-xl {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__notes {
@@ -52,11 +81,16 @@
 
     &__picture {
         grid-area: pict;
+
+        @include max-xl {
+            text-align: center;
+            padding: $gap $gap-sm;
+        }
     }
 
     &__image {
         max-width: 759px;
-        max-height: 529px;
+        height: auto;
+        width: 100%;
     }
-
 }

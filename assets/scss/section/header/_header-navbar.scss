@@ -9,6 +9,12 @@
     padding-top: $gap;
     padding-bottom: $gap;
 
+    @include max-md {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
     &::after {
         position: absolute;
         content: "";
@@ -16,12 +22,14 @@
         width: 100vw;
         height: 1px;
         background-color: rgba($primary-color, 0.5);
-        left: 49.4%;
+        left: 50%;
         transform: translateX(-50%);
     }
 
     &__logo {
-        margin-right: 50px;
+        @include min-md {
+            margin-right: 50px;
+        }
     }
 
     &__list {
@@ -29,9 +37,13 @@
         display: flex;
         flex-flow: row wrap;
         gap: 0.2em $gap;
-    }
 
-    &__item {}
+        @include max-md {
+            justify-content: center;
+            margin-top: $gap;
+            margin-bottom: $gap;
+        }
+    }
 
     &__link {
         display: block;
@@ -39,13 +51,30 @@
         font-size: 15px;
         line-height: 20px;
         color: $primary-color;
+
+        @include min-md {
+            padding: $gap-sm;
+        }
+
+        @include max-md {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
     }
 
     &__action {
-        margin-left: auto;
         display: flex;
         gap: $gap-sm;
-        margin-top: 5px;
-        margin-bottom: 5px;
+
+        @include min-md {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            margin-left: auto;
+        }
+
+        @include max-md {
+            margin: auto;
+            margin-bottom: $gap;
+        }
     }
 }
