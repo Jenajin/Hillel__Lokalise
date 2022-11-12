@@ -2,8 +2,16 @@
 @use "../../presets" as *;
 
 .quality {
-    padding-top: 90px;
-    padding-bottom: 150px;
+    @include min-md {
+        padding-top: 90px;
+        padding-bottom: 150px;
+    }
+
+    @include max-md {
+        padding-top: 45px;
+        padding-bottom: 75px;
+    }
+
     display: grid;
 
     @include min-md {
@@ -93,6 +101,10 @@
         font-size: 20px;
         line-height: 30px;
         color: $primary-color;
+
+        @include max-md {
+            text-align: center;
+        }
     }
 }
 
