@@ -1,0 +1,82 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.productivity {
+
+    &-title {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 60px;
+        color: $primary-color;
+        text-align: center;
+        
+        @include min-md {
+            margin-top: 150px;
+            margin-bottom: 90px; 
+        }
+
+        @include max-md {
+            margin-top: 75px;
+            margin-bottom: 45px;
+        }
+    }
+
+    &-container {
+        display: grid;
+        column-gap: $gap + $gap-sm;
+        row-gap: $gap + $gap;
+        
+        @include min-md {
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(0 1fr);
+            margin-bottom: 187px;
+        }
+
+        @include max-md {
+            grid-auto-flow: initial;
+            grid-template-columns: 1fr;
+            margin-bottom: 90px;
+        }
+    }
+}
+
+.productivity-infomation {
+    color: $primary-color;
+    @include link-underline;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    gap: 25px;
+
+    &__title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &__link {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &__picture {
+        order: -1;
+        height: 201px;
+
+        @include max-md {
+            align-self: center;
+        }
+    }
+
+    &__image {
+        max-width: 179px;
+        max-height: 201px;
+    }
+
+}
