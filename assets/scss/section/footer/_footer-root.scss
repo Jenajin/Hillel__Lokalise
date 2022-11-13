@@ -1,0 +1,40 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.footer-root {
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 125px;
+
+        @include max-sm {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__info {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 90px;
+        height: 21px;
+    }
+
+    &__text {
+        max-width: 370px;
+        margin: 0 $gap 0 0;
+    }
+
+    &__year {
+        margin: 0;
+    }
+
+    &__copyrite {
+        margin: 0;
+    }
+}

@@ -1,0 +1,7 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.footer {
+    color: $primary-color;
+    background-color: $color-footer;
+}

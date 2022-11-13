@@ -2,13 +2,12 @@
 @use "../../presets" as *;
 
 .footer-info {
-    color: $primary-color;
-    background-color: $color-footer;
-
+    
     &__container {
         display: flex;
         padding-top: 95px;
         padding-bottom: 95px;
+        border-bottom: 1px solid $primary-color;
 
         @include max-md {
             flex-wrap: wrap;
@@ -24,10 +23,9 @@
 
     @include max-md {
         outline: 1px solid $primary-color;
-        box-shadow: 0 0  15px $primary-color;
+        box-shadow: 0 0 15px $primary-color;
         margin-bottom: 70px;
         padding: $gap-sm;
-        
     }
 
     &__title {
@@ -64,7 +62,7 @@
     width: 100%;
     display: grid;
     column-gap: $gap-sm;
-    
+
     @include min-lg {
         grid-template-columns: repeat(4, 1fr);
         margin-left: 140px;
@@ -94,12 +92,12 @@
     &__list {
         @include unlist;
     }
-    
+
     &__item {
         margin-top: 15px;
         margin-bottom: 15px;
     }
-    
+
     &__link {
         font-size: 15px;
         line-height: 15px;
