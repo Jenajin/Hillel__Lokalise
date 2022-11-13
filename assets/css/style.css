@@ -165,6 +165,50 @@ template {
 [hidden] {
   display: none;
 }
+
+@font-face {
+  font-family: "Graphik LCG";
+  font-weight: 600;
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/GraphikLCG-Semibold.woff") format("woff2"), url("../GraphikLCG-Semibold.woff2") format("woff");
+}
+@font-face {
+  font-family: "Graphik LCG";
+  font-weight: normal;
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/GraphikLCG-Regular.woff") format("woff2"), url("../fonts/GraphikLCG-Regular.woff2") format("woff");
+}
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow-x: hidden;
+
+  min-width: 405px;
+
+  font-family: "Graphik LCG";
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+
 .container {
   max-width: 1370px;
   padding-right: 20px;
@@ -222,49 +266,6 @@ template {
   width: 100%;
   max-width: 193px;
   min-height: 60px;
-}
-
-@font-face {
-  font-family: "Graphik LCG";
-  font-weight: 600;
-  font-style: normal;
-
-  font-display: swap;
-  src: url("../fonts/GraphikLCG-Semibold.woff") format("woff2"), url("../GraphikLCG-Semibold.woff2") format("woff");
-}
-@font-face {
-  font-family: "Graphik LCG";
-  font-weight: normal;
-  font-style: normal;
-
-  font-display: swap;
-  src: url("../fonts/GraphikLCG-Regular.woff") format("woff2"), url("../fonts/GraphikLCG-Regular.woff2") format("woff");
-}
-*,
-*::after,
-*::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-html {
-  font-size: 16px;
-}
-
-body {
-  overflow-x: hidden;
-
-  min-width: 405px;
-
-  font-family: "Graphik LCG";
-  font-weight: 400;
-  font-style: normal;
-}
-
-a {
-  text-decoration: none;
-
-  color: inherit;
 }
 
 .header-content {
@@ -632,9 +633,6 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
       flex-direction: column;
-  -webkit-box-pack: baseline;
-  -ms-flex-pack: baseline;
-  justify-content: baseline;
 
   color: black;
 
@@ -1036,7 +1034,6 @@ a {
     margin-bottom: 90px;
   }
   .productivity-container {
-    grid-auto-columns: minmax(0 1fr);
     grid-auto-flow: column;
   }
   .recommendation__feedback-description {
