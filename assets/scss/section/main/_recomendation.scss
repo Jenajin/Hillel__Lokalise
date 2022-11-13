@@ -1,8 +1,6 @@
 @use "../../mixins" as *;
 @use "../../presets" as *;
 
-
-
 .recommendation {
     background-color: $color-fitback;
 
@@ -16,8 +14,6 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-
-
     }
 
     &__photo {
@@ -54,9 +50,4 @@
 
         }
     }
-
-    &-link {}
-
-    &-logo {}
-
 }
