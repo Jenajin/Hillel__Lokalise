@@ -1,0 +1,46 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.exhortation {
+    background-color: $color-main;
+    padding-top: $gap;
+    padding-bottom: $gap;
+    color: $primary-color;
+    text-align: center;
+    
+    &__title {
+        font-weight: 600;
+        line-height: 75px;
+        max-width: 784px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        @include min-sm {
+            margin-top: 100px;
+            margin-bottom: 30px;
+            font-size: 65px;
+        }
+
+        @include max-sm {
+            font-size: 55px;
+        }
+    }
+
+    &__description {
+        margin-top: 30px;
+        margin-bottom: 55px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    &__action {
+        
+        @include min-sm {
+            margin-bottom: 140px;  
+        }
+        
+        @include max-sm {
+            margin-bottom: 100px;
+        }
+    }
+}

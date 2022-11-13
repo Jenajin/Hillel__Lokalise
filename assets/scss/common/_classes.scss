@@ -13,23 +13,35 @@
     font-weight: 600;
     text-align: center;
     cursor: pointer;
-    font-size: 16px;
 }
+
 .btn--light {
     background-color: $color-light;
     border: 1px solid rgba($primary-color, 0.5);
     color: $primary-color;
+    font-size: 16px;
 }
+
 .btn--acent {
     background-color: $secondary-color;
     border: none;
     color: $color-light;
+    font-size: 16px;
 }
+
+.btn--act {
+    font-size: 17px;
+    background: $primary-color;
+    color: $color-light;
+    border: none;
+}
+
 .btn--sm {
     min-width: 120px;
     max-width: 250px;
     height: 45px;
 }
+
 .btn--md {
     min-width: 160px;
     max-width: 260px;

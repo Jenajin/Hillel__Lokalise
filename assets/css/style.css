@@ -179,7 +179,6 @@ template {
   cursor: pointer;
   text-align: center;
 
-  font-size: 16px;
   font-weight: 600;
 }
 
@@ -187,12 +186,24 @@ template {
   color: black;
   border: 1px solid rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
+
+  font-size: 16px;
 }
 
 .btn--acent {
   color: #ffffff;
   border: none;
   background-color: #ff6336;
+
+  font-size: 16px;
+}
+
+.btn--act {
+  color: #ffffff;
+  border: none;
+  background: black;
+
+  font-size: 17px;
 }
 
 .btn--sm {
@@ -815,6 +826,31 @@ a {
   margin-top: 25px;
   margin-bottom: 32px;
 }
+
+.exhortation {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  text-align: center;
+
+  color: black;
+  background-color: #ff9c7d;
+}
+.exhortation__title {
+  max-width: 784px;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-weight: 600;
+  line-height: 75px;
+}
+.exhortation__description {
+  margin-top: 30px;
+  margin-bottom: 55px;
+
+  font-size: 20px;
+  line-height: 30px;
+}
 @media (min-width: 575.8px) {
   .localization {
     padding-top: 120px;
@@ -822,6 +858,15 @@ a {
   }
   .program__info-image {
     margin-right: 47px;
+  }
+  .exhortation__title {
+    margin-top: 100px;
+    margin-bottom: 30px;
+
+    font-size: 65px;
+  }
+  .exhortation__action {
+    margin-bottom: 140px;
   }
 }
 @media (min-width: 767.8px) {
@@ -1023,5 +1068,11 @@ a {
     justify-content: center;
 
     text-align: center;
+  }
+  .exhortation__title {
+    font-size: 55px;
+  }
+  .exhortation__action {
+    margin-bottom: 100px;
   }
 }
