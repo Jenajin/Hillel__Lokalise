@@ -1,0 +1,107 @@
+@use "../../mixins" as *;
+@use "../../presets" as *;
+
+.footer-info {
+    color: $primary-color;
+    background-color: $color-footer;
+
+    &__container {
+        display: flex;
+        padding-top: 95px;
+        padding-bottom: 95px;
+
+        @include max-md {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+.other {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 300px;
+
+    @include max-md {
+        outline: 1px solid $primary-color;
+        box-shadow: 0 0  15px $primary-color;
+        margin-bottom: 70px;
+        padding: $gap-sm;
+        
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 50px;
+        margin: 0 0 38px 0;
+    }
+
+    &__image {
+        margin-bottom: 30px;
+    }
+
+    &__logo {
+        width: 80px;
+        height: 32px;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 12px;
+        margin-bottom: 18px;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.footer-navigation {
+    width: 100%;
+    display: grid;
+    column-gap: $gap-sm;
+    
+    @include min-lg {
+        grid-template-columns: repeat(4, 1fr);
+        margin-left: 140px;
+    }
+
+    @include maxmin-lg-md {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 70px;
+    }
+
+    @include maxmin-md-sm {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0;
+    }
+
+    @include max-sm {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    &__list {
+        @include unlist;
+    }
+    
+    &__item {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    &__link {
+        font-size: 15px;
+        line-height: 15px;
+    }
+}
