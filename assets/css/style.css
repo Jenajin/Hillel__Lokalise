@@ -209,6 +209,18 @@ a {
   color: inherit;
 }
 
+a:hover {
+  color: brown;
+}
+
+.productivity-infomation__details-text--active {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.productivity-infomation__details-text--active:hover {
+  color: brown;
+}
+
 .container {
   max-width: 1370px;
   padding-right: 20px;
@@ -221,6 +233,9 @@ a {
   padding: 0.2em;
 
   cursor: pointer;
+  -webkit-transition: 0.3s;
+       -o-transition: 0.3s;
+          transition: 0.3s;
   text-align: center;
 
   font-weight: 600;
@@ -234,6 +249,11 @@ a {
   font-size: 16px;
 }
 
+.btn--light:hover {
+  -webkit-box-shadow: 0 0 10px orangered;
+          box-shadow: 0 0 10px orangered;
+}
+
 .btn--acent {
   color: #ffffff;
   border: none;
@@ -242,12 +262,23 @@ a {
   font-size: 16px;
 }
 
+.btn--acent:hover {
+  -webkit-box-shadow: 0 0 10px orangered;
+          box-shadow: 0 0 10px orangered;
+}
+
 .btn--act {
   color: #ffffff;
   border: none;
   background: black;
 
   font-size: 17px;
+}
+
+.btn--act:hover {
+  color: brown;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .btn--sm {
@@ -494,6 +525,9 @@ a {
 
   color: inherit;
 }
+.blurb__descriptio a:hover {
+  color: brown;
+}
 .blurb__start {
   color: black;
 
@@ -591,6 +625,9 @@ a {
 
   color: inherit;
 }
+.aspect__description a:hover {
+  color: brown;
+}
 .aspect__image {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
@@ -643,6 +680,9 @@ a {
 
   color: inherit;
 }
+.productivity-infomation a:hover {
+  color: brown;
+}
 .productivity-infomation__title {
   margin: 0;
 
@@ -659,7 +699,9 @@ a {
   line-height: 30px;
 }
 .productivity-infomation__details-text {
-  text-decoration: underline;
+  width: -webkit-fit-content;
+  width:    -moz-fit-content;
+  width:         fit-content;
 }
 .productivity-infomation__details-text::marker {
   content: none;

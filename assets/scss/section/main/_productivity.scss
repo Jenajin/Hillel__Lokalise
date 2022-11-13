@@ -10,10 +10,10 @@
         line-height: 60px;
         color: $primary-color;
         text-align: center;
-        
+
         @include min-md {
             margin-top: 150px;
-            margin-bottom: 90px; 
+            margin-bottom: 90px;
         }
 
         @include max-md {
@@ -27,7 +27,7 @@
         column-gap: $gap + $gap-sm;
         row-gap: $gap + $gap;
         margin-bottom: $gap;
-        
+
         @include min-md {
             grid-auto-flow: column;
         }
@@ -63,7 +63,8 @@
         line-height: 30px;
 
         &-text {
-            text-decoration: underline;
+            width: fit-content;
+
             &::marker {
                 content: none;
             }

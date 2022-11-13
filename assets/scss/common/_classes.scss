@@ -13,6 +13,7 @@
     font-weight: 600;
     text-align: center;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn--light {
@@ -22,6 +23,10 @@
     font-size: 16px;
 }
 
+.btn--light:hover {
+    box-shadow: 0 0 10px orangered;
+  }
+
 .btn--acent {
     background-color: $secondary-color;
     border: none;
@@ -29,11 +34,20 @@
     font-size: 16px;
 }
 
+.btn--acent:hover {
+    box-shadow: 0 0 10px orangered;
+}
+
 .btn--act {
     font-size: 17px;
     background: $primary-color;
     color: $color-light;
     border: none;
+}
+
+.btn--act:hover {
+    color: brown;
+    box-shadow: 0 0 15px rgba($primary-color, 0.5);
 }
 
 .btn--sm {
