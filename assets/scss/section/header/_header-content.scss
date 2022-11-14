@@ -25,6 +25,11 @@
         grid-template-columns: 1fr;
     }
 
+    @include min-xxl {
+        margin-top: 180px;
+        margin-bottom: 180px;
+    }
+
     &__title {
         grid-area: tl;
         margin: 0 0 8px 0;

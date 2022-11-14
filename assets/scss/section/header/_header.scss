@@ -7,8 +7,5 @@
 
     @include max-xxl {
         min-height: 100vh;
-    }
-    @include min-xxl {
-        max-height: 100vh;
-    }
+    }  
 }
