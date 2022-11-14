@@ -2,7 +2,13 @@
 @use "../../presets" as *;
 
 .header {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    @include max-xxl {
+        min-height: 100vh;
+    }
+    @include min-xxl {
+        max-height: 100vh;
+    }
 }

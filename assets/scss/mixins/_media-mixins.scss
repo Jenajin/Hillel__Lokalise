@@ -1,6 +1,22 @@
 @use "../presets/variables" as *;
 
+@mixin min-xxl {
+    @media (min-width: calc($xxl - 0.2px)) {
+        @content
+    }
+}
 
+@mixin max-xxl {
+    @media (max-width: $xxl) {
+        @content
+    }
+}
+
+@mixin maxmin-xxl-xl {
+    @media ((max-width: $xxl)) and (min-width: calc($xl - 0.2px)) {
+        @content
+    }
+}
 
 @mixin min-xl {
     @media (min-width: calc($xl - 0.2px)) {
